@@ -1,0 +1,32 @@
+{
+  "version": 3,
+  "exported_at": "2026-06-22T14:57:59.636Z",
+  "project": {
+    "name": "blank",
+    "color": "#818CF899",
+    "temperature": 0.3
+  },
+  "conversations": [],
+  "mcp_servers": [
+    {
+      "name": "slp_project_1",
+      "server_type": "local",
+      "config": {
+        "name": "slp_project_1"
+      }
+    }
+  ],
+  "folders": [],
+  "document_folders": {},
+  "document_status": {},
+  "tab_state": {
+    "tabs": [
+      {
+        "id": "conv-new",
+        "type": "conversation",
+        "title": "New Conversation"
+      }
+    ],
+    "activeTabId": "conv-new"
+  }
+}

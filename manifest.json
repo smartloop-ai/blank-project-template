@@ -1,0 +1,161 @@
+{
+  "version": "1.0",
+  "exported_at": "2026-06-22T14:57:59.612579+00:00",
+  "project": {
+    "id": "b7e383c6-18d3-4393-b585-a5487cd602f8",
+    "project_dir": "/Users/mehfuzh/.smartloop/8025f1c9-5f66-474c-9ba6-820b623a0a9c/b7e383c6-18d3-4393-b585-a5487cd602f8",
+    "current": true,
+    "name": "blank",
+    "description": "",
+    "system": false,
+    "cwd": "/Users/mehfuzh/smartloop/blank",
+    "documents": [],
+    "mcp_servers": [
+      {
+        "id": "__system_tools__",
+        "name": "Smartloop",
+        "pkg": null,
+        "description": "Built-in tools for file operations, search, and shell commands",
+        "summary": null,
+        "config": null,
+        "server_type": "remote",
+        "remote_config": {
+          "server_url": "http://127.0.0.1:63008/mcp/system/mcp",
+          "auth_type": "none",
+          "token_endpoint": null,
+          "authorization_endpoint": null
+        },
+        "enabled": true,
+        "system": true,
+        "tools": [
+          {
+            "name": "bash",
+            "description": "Execute a shell command (git, echo, etc.) on the host machine",
+            "input_schema": {
+              "type": "object",
+              "properties": {
+                "command": {
+                  "type": "string",
+                  "description": "Shell command to execute"
+                }
+              },
+              "required": [
+                "command"
+              ]
+            }
+          },
+          {
+            "name": "file-read",
+            "description": "Read a file and return its content",
+            "input_schema": {
+              "type": "object",
+              "properties": {
+                "path": {
+                  "type": "string",
+                  "description": "File path to read"
+                }
+              },
+              "required": [
+                "path"
+              ]
+            }
+          },
+          {
+            "name": "file-write",
+            "description": "Write content to a file in the working directory",
+            "input_schema": {
+              "type": "object",
+              "properties": {
+                "path": {
+                  "type": "string",
+                  "description": "File path to write"
+                },
+                "content": {
+                  "type": "string",
+                  "description": "Content to write"
+                }
+              },
+              "required": [
+                "path",
+                "content"
+              ]
+            }
+          },
+          {
+            "name": "explore",
+            "description": "Explore the local project directory, read files, and produce an LLM-enriched summary of the codebase",
+            "input_schema": {
+              "type": "object",
+              "properties": {
+                "query": {
+                  "type": "string",
+                  "description": "What to look for in the codebase"
+                }
+              },
+              "required": [
+                "query"
+              ]
+            }
+          }
+        ],
+        "server_info": null
+      },
+      {
+        "id": "__fetch__",
+        "name": "fetch",
+        "pkg": "mcp-server-fetch",
+        "description": "Fetches URLs from the internet and extracts content as markdown",
+        "summary": null,
+        "config": null,
+        "server_type": "remote",
+        "remote_config": {
+          "server_url": "http://127.0.0.1:63008/mcp/fetch/mcp",
+          "auth_type": "none",
+          "token_endpoint": null,
+          "authorization_endpoint": null
+        },
+        "enabled": true,
+        "system": true,
+        "tools": [
+          {
+            "name": "fetch",
+            "description": "Fetches a URL from the internet and extracts its contents as markdown",
+            "input_schema": {
+              "type": "object",
+              "properties": {
+                "url": {
+                  "type": "string",
+                  "description": "URL to fetch"
+                },
+                "max_length": {
+                  "type": "integer",
+                  "description": "Maximum number of characters to return",
+                  "default": 5000
+                },
+                "start_index": {
+                  "type": "integer",
+                  "description": "Start content from this character index",
+                  "default": 0
+                },
+                "raw": {
+                  "type": "boolean",
+                  "description": "Get raw content without markdown conversion",
+                  "default": false
+                }
+              },
+              "required": [
+                "url"
+              ]
+            }
+          }
+        ],
+        "server_info": null
+      }
+    ],
+    "adapters": [],
+    "sessions": [
+      "027faef9-d6b1-470c-8eba-bf2315a499cc",
+      "a0e8ec9e-be2e-43f2-87c5-afa20e37dc85"
+    ]
+  }
+}
