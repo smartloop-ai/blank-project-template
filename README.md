@@ -7,7 +7,6 @@ A starter template for creating new projects in [Smartloop](https://smartloop.ai
 This template ships with a minimal working setup:
 
 - **System tools** — built-in file operations (`file-read`, `file-write`), shell access (`bash`), and codebase exploration (`explore`)
-- **fetch-url skill** — a pre-configured skill that uses the fetch tool to extract information from any URL on demand
 
 ## Project Structure
 
@@ -17,10 +16,7 @@ This template ships with a minimal working setup:
 ├── workspace/
 │   └── .workspace_manifest.json
 ├── project/
-│   ├── about.md            # About Smartloop
-│   └── skills/
-│       └── fetch-url/
-│           └── SKILL.md    # Skill definition for URL fetching
+│   └── about.md            # About Smartloop
 ├── conversations/          # Conversation history (empty on init)
 └── LICENSE                 # MIT
 ```
