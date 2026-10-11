@@ -99,57 +99,6 @@
           }
         ],
         "server_info": null
-      },
-      {
-        "id": "__fetch__",
-        "name": "fetch",
-        "pkg": "mcp-server-fetch",
-        "description": "Fetches URLs from the internet and extracts content as markdown",
-        "summary": null,
-        "config": null,
-        "server_type": "remote",
-        "remote_config": {
-          "server_url": "http://127.0.0.1:63008/mcp/fetch/mcp",
-          "auth_type": "none",
-          "token_endpoint": null,
-          "authorization_endpoint": null
-        },
-        "enabled": true,
-        "system": true,
-        "tools": [
-          {
-            "name": "fetch",
-            "description": "Fetches a URL from the internet and extracts its contents as markdown",
-            "input_schema": {
-              "type": "object",
-              "properties": {
-                "url": {
-                  "type": "string",
-                  "description": "URL to fetch"
-                },
-                "max_length": {
-                  "type": "integer",
-                  "description": "Maximum number of characters to return",
-                  "default": 5000
-                },
-                "start_index": {
-                  "type": "integer",
-                  "description": "Start content from this character index",
-                  "default": 0
-                },
-                "raw": {
-                  "type": "boolean",
-                  "description": "Get raw content without markdown conversion",
-                  "default": false
-                }
-              },
-              "required": [
-                "url"
-              ]
-            }
-          }
-        ],
-        "server_info": null
       }
     ],
     "adapters": [],
